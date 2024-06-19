@@ -1,0 +1,16 @@
+<h1>Buscando <small>{{termino}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el termino:{{termino}}
+
+        </div>
+
+    </div>
+</div>
+
+<!--Aqui estoy llamando al selector del componente padre, que a su ves permite renderizar el hijo en esta instancia
+donde se inserto el selector-->
+<app-heroe-tarjeta [heroe]="x" [index]="x.idx" *ngFor="let x of heroes"></app-heroe-tarjeta>

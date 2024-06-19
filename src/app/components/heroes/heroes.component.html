@@ -1,0 +1,4 @@
+<!--Este es el componente padre-->
+<!--dESDE AQUI LE MANDAMOS EL INDEX A HEROES.COMPONENT-->
+
+<app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="x" *ngFor="let x of heroes; let i = index"></app-heroe-tarjeta>

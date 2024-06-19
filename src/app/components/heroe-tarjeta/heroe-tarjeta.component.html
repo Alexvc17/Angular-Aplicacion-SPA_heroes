@@ -1,0 +1,23 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card animated fadeIn fast">
+            <img [src]=heroe.img class="card-img-top" [alt]=heroe.nombre>
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+                <p class="card-text"><small class="text-body-secondary">{{heroe.aparicion}}</small></p>
+            </div>
+
+            <button (click)="verHeroe()" type="button" class="btn btn-outline-primary">Ver más</button>
+            <!--<a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más link...</a>-->
+            <!--El slash (/) indica que la ruta debe ser relativa a la raíz del sitio web en lugar
+            de ser relativa a la ruta actual. En otras palabras, indica que la ruta es absoluta en
+            lugar de ser relativa.
+
+          En Angular, cuando utilizas [routerLink] para navegar a otra página dentro de la aplicación,
+          se utiliza una ruta relativa por defecto. Al agregar un slash delante del arreglo que contiene la ruta,
+          estás indicando que la ruta es absoluta, por lo que Angular buscará la ruta desde la raíz de la aplicación
+          en lugar de la ruta actual. Por eso es que al agregar el slash te funcionó correctamente el enlace.-->
+        </div>
+    </div>
+</div>
